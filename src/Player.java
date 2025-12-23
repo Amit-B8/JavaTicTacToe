@@ -15,24 +15,10 @@ public abstract class Player {
     /**
      * The symbol for this player, either 'X' or 'O'.
      */
-    // Made final since they are set once in the constructor and never need to change afterward
-    // No setter exists, but if there was, it can not be final anymore since final prevents reassignment.
-    // Since Java's references are passed by value final keeps the same reference for this object.
-    // So final since NO Setter only Set in constructor
-    // The symbol for this player, either 'X' or 'O'
-    // Private so only this class can directly access it
-    // Subclasses can use super to read it but cannot change it
     private final char tictacToeSymbol;
     /**
      * The name of this player (e.g., "Player1" or "Computer").
      */
-    // Made final since they are set once in the constructor and never need to change afterward
-    // No setter exists, but if there was, it can not be final anymore since final prevents reassignment.
-    // Since Java's references are passed by value final keeps the same reference for this object.
-    // So final since NO Setter only Set in constructor
-    // For the players name
-    // Private so only this class can directly access it
-    // Subclasses can use super to read it but cannot change it
     private final String name;
 
     /**
@@ -42,10 +28,6 @@ public abstract class Player {
      * @param tictacToeSymbol The player's symbol either X or O
      * @param name The player's name
      */
-
-    // This is the abstract Player class constructor that sets the player's symbol and name.
-    // Cannot create a Player directly since abstract, but subclasses like Human and Computer
-    // use this constructor to initialize their inherited fields.
     public Player (char tictacToeSymbol, String name) {
         this.tictacToeSymbol = tictacToeSymbol;
         this.name = name;
@@ -81,7 +63,4 @@ public abstract class Player {
      */
     // This is an Abstract method subclass. Both computer and Human have to implement their own ways of moving
     public abstract void makeMove(Board board);
-
-
-
 }
